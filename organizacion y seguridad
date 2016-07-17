@@ -1,0 +1,66 @@
+Organización y Seguridad
+
+Propuestas de organización de archivos
+El número de archivos que contiene un tema de worpress va a depender directamente de la complejidad del mismo, sin embargo existen archivos que soy muy comunes en un theme :
+
+Plantilla 404 = 404.php
+Plantilla de Archivo = archive.php
+Página Indice de Archivos = archives.php
+Plantilla de Comentarios = comments.php
+Plantilla de Pie de Página = footer.php
+Plantilla de Cabecera = header.php
+Enlaces = links.php
+Plantilla de Página Principal = index.php
+Plantilla de Página = page.php
+Plantilla de Popup de Comentarios = comments-popup.php
+Plantilla de Entradas = single.php
+Formuario de Búsquedas = searchform.php
+Plantilla Buscar = search.php
+Plantilla de Barra Lateral = sidebar.php
+Hoja de Estilos = style.css
+Modelos recomendables de organización de archivos:
+WooCommerce
+_s (Underscores)
+WordPress Plugin Boilerplate
+Vulnerabilidades y prácticas de seguridad en archivos
+Prácticas de configuración
+Existen buenas prácticas de seguridad en este CMS que permitan disminuir las vulnerabilidades más habituales de WordPress. No nos confundamos, WordPress es un CMS muy seguro, pero el problema suele estar en los archivos de los temas y plugins creados por terceros.
+
+1. Evitar el uso de “admin” como nombre de usuario para el administrador. Una vez hayamos decidido el nombre de usuario administrador, debemos usar un alias en la cuenta para que el nombre de usuario no esté expuesto al público. Aún así nuestro nombre de usuario estará expuesto al público mediante la url de autor; por ejemplo: http://tuWeb.com/author/usuario/. Podéis ver aquí cómo ocultar el nombre de usuario en WordPress.
+
+2. Las contraseñas deben ser también seguras, siendo lo más aleatorias posibles y conteniendo letras, números y caracteres especiales.
+
+3. Actualizar siempre WordPress a la última versión y si es posible, activar las actualizaciones automáticas para versiones menores que no suelen suponer ninguna incompatibilidad. Debemos tener también actualizados los temas y plugins que utilicemos.
+
+4. Debemos ocultar la versión de WordPress que estamos utilizando.
+
+5. Hay que limitar de algún modo el número máximo de intentos de acceso por IP, algo que como decíamos, podemos lograr con algún plugin como Wordfence Security, BulletProof Security, All In One WP Security o Sucuri Security.
+
+6. Tenemos que dotar de seguridad extra al archivo wp-config.php, ya que es el que puede proporcionar un acceso total a la web.
+
+7. Siguiendo con el archivo wp-config.php, debemos agregar la siguiente línea de código para deshabilitar la edición de archivos tanto de temas como de Plugins mediante la interfaz de WordPress:
+
+define( ‘DISALLOW_FILE_EDIT’, true);
+8. Es una buena opción cambiar el prefijo de las tablas de WordPress en nuestra base de datos para que sea más complicado modificarlas. Podemos hacerlo siguiendo las instrucciones del enlace anterior o mediante algún plugin.
+
+9. Es muy importante realizar copias de seguridad diarias tanto de nuestros archivos como de nuestra base de datos. Si nuestro panel de Hosting dispone de esta funcionalidad, es lo más recomendable. Podemos utilizar también plugins como VaultPress o BackWPup.
+
+10. Por último, es recomendable usar el protocolo seguro SFTP cuando nos conectemos mediante FTP a nuestro servidor.
+
+Prácticas de código
+Deshabilitar la ejecución directa de archivos PHP por fuera del contexto de WordPress. Esto se puede lograr colocando un chequeo como el siguiente al inicio del archivo:
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+    die;
+}
+Usar la etiqueta de apertura <?php en lugar del shorthand <?, ya que esta última suele estar desactivada en algunos servidores.
+Evitar cerrar la etiqueta <?php con ?> en archivos que no contengan templates. Algunas versiones de Apache pueden el espacio vacío o saltos de línea a continuación del cierre como información enviada al browser y causar el error fatal "headers already sent".
+Evitar la generación automática de usuarios a menos que sea expresamente necesario. Por ejemplo, el siguiente código crea un nuevo usuario con permisos de administración con solo ingresar a la URL http://misitio.com/?name=pwner&email=1337@haxxor.com&password=capogroso:
+if ( ! username_exists( $_GET['name'] ) && ! email_exists( $_GET['email'] ) ) {
+    if ( $user_id = wp_create_user( $_GET['name'], $_GET['password'], $_GET['email'] ) ) {
+        wp_update_user( array( 'ID' => $user_id, 'role' => 'administrator' ) );
+    }
+}
+Validar y sanitizar correctamente la información ingresada a la base de datos.
+Evitar el uso de características agregadas en nuevas versiones de PHP (superior a 5.2.14) y WordPress, a menos que se cuente con un fallback o función alternativa.
+Evitar dejar en el código de nuestros plugins y themes funciones de debugging como die() y var_dump().
