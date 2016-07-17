@@ -1,0 +1,16 @@
+Jerarquía de ejecución y lectura de archivos (Template Hierarchy)
+https://developer.wordpress.org/themes/basics/template-hierarchy/
+https://wphierarchy.com/
+
+WordPress usa la Cadena de Consulta (o query string) —información contenida dentro de cada URL del sitio— para decidir qué modelo o conjunto de las plantillas se utiliza para mostrar la página.
+
+En primer lugar, WordPress se relaciona cada query string al tipo de consulta —es decir, decide qué tipo de página (una página de búsqueda, una página de categoría, la página de inicio, etc) se está solicitando.
+
+Las plantillas son elegidas entonces —y el contenido de la página web se genera— en el orden sugerido por la jerarquía de plantillas de WordPress, dependiendo de la disponibilidad de las plantillas (templates) en el theme activo.
+
+WordPress busca templates con nombres específicos en el directorio del theme y utiliza la primera coincidencia con el template listado bajo la consulta apropiada. Si WordPress no puede encontrar un template con el nombre correspondiente, pasa al siguiente nombre de archivo en el orden de jerarquía. Si WordPress no puede encontrar ningún template, se usará index.php, que es el único template obligatorio para construir un theme.
+
+Ejemplos
+Si un sitio está en http://domain.com/ y un visitante visita el enlace de una página de categoría como http://domain.com/category/your-cat/, WordPress busca un template en el directorio del Tema actual que conincida con el ID de la categoría. Si el ID de la categoría es 4, WordPress busca un template llamado category-4.php. Si no aparece, después WordPress busca un template para una categoría genérica, category.php. Si este archivo tampoco existe, WordPress busca un template generico, archive.php. Si este tampoco aparece, WordPress vuelve al archivo principal del, index.php.
+
+Si un visitante va a tu página de inicio en http://domain.com/, WordPress busca un template llamado home.php y lo usa para general la página pedida. Si home.php no aparece, WordPress busca un archivo llamado index.php, y lo usa para generar la página.
