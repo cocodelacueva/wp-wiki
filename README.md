@@ -1,1 +1,1 @@
-# wp-wiki
+# wordpress avanzado, curso de coderhouse
