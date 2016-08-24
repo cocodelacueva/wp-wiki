@@ -105,18 +105,20 @@ https://make.wordpress.org/core/handbook/best-practices/coding-standards/
 Seguir epecificaciones estandarizadas para escribir código ayuda a prevenir errores comunes, mejora la legibilidad, simplifica modificaciones y colaboración entre desarrolladores, y en cierta manera garantiza que sea comprensible sin importar quién lo haya escrito.
 
 ### Sitios a seguir: noticias, desarrolladores y soporte
-* Make WordPress: https://make.wordpress.org/
-* WordPress Tavern: https://wptavern.com/
-* ManageWP: https://managewp.org/
-* Smashing Magazine: https://www.smashingmagazine.com/
-A List Apart: http://alistapart.com/
-* Tom McFarlin: https://tommcfarlin.com/
-* Jeremy Felt: https://jeremyfelt.com/
-* Ayuda WordPress: http://ayudawp.com/
+* [Make WordPress](https://make.wordpress.org/)
+* [WordPress Tavern](https://wptavern.com/)
+* [ManageWP](https://managewp.org/)
+* [Smashing Magazine](https://www.smashingmagazine.com/)
+* [A List Apart](http://alistapart.com/)
+* [Tom McFarlin](https://tommcfarlin.com/)
+* [Jeremy Felt](https://jeremyfelt.com/)
+* [Ayuda WordPress](http://ayudawp.com/)
 
 ### Artículos útiles
-* Programar no es (tan) complicado http://www.andrezrv.com/2015/10/15/programar-no-es-tan-complicado/
-* Psicología del programador http://www.andrezrv.com/2015/11/04/psicologia-del-programador/
-* Some Thoughts On Writing Accessible Code http://www.andrezrv.com/2014/05/09/thoughts-writing-accesible-code/
-* More Thoughts on Writing Accessible Code http://www.andrezrv.com/2014/08/07/thoughts-writing-accessible-code/
-* The Single Biggest Mistake Programmers Make Every Day https://medium.com/javascript-scene/the-single-biggest-mistake-programmers-make-every-day-62366b432308
+* [Programar no es (tan) complicado](http://www.andrezrv.com/2015/10/15/programar-no-es-tan-complicado/)
+* [Psicología del programador](http://www.andrezrv.com/2015/11/04/psicologia-del-programador/)
+* [Some Thoughts On Writing Accessible Code](http://www.andrezrv.com/2014/05/09/thoughts-writing-accesible-code/)
+* [More Thoughts on Writing Accessible Code](http://www.andrezrv.com/2014/08/07/thoughts-writing-accessible-code/)
+* [The Single Biggest Mistake Programmers Make Every Day](https://medium.com/javascript-scene/the-single-biggest-mistake-programmers-make-every-day-62366b432308)
+* Video: [Herramientas del desarrollador moderno](http://www.andrezrv.com/2015/03/12/wordpress-meetup-buenos-aires-herramientas-del-desarrollador-moderno/)
+* Tutorial: [Try Git](https://try.github.io/levels/1/challenges/1)
