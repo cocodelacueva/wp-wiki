@@ -104,7 +104,27 @@ Nuevo portal para desarrolladores, que hizo su aparición durante 2015. Está di
 https://make.wordpress.org/core/handbook/best-practices/coding-standards/
 Seguir epecificaciones estandarizadas para escribir código ayuda a prevenir errores comunes, mejora la legibilidad, simplifica modificaciones y colaboración entre desarrolladores, y en cierta manera garantiza que sea comprensible sin importar quién lo haya escrito.
 
-### Sitios a seguir: noticias, desarrolladores y soporte
+### Virtualización
+
+* [Vagrant](https://www.vagrantup.com/)
+* [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV)
+* [Trellis](https://roots.io/trellis/)
+
+### Debugging
+
+* [Xdebug](https://xdebug.org/)
+* [Xdebug - PhpStorm](https://www.jetbrains.com/help/phpstorm/2016.2/configuring-xdebug.html)
+* [Xdebug - Sublime Text](https://www.sitepoint.com/debugging-xdebug-sublime-text-3/)
+* [Xdebug - Atom](https://atom.io/packages/php-debug)
+
+### Inteagración continua
+
+* [Capistrano](http://capistranorb.com/)
+* [Ansible](https://www.ansible.com/)
+
+
+## Sitios a seguir: noticias, desarrolladores y soporte
+
 * [Make WordPress](https://make.wordpress.org/)
 * [WordPress Tavern](https://wptavern.com/)
 * [ManageWP](https://managewp.org/)
