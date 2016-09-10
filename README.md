@@ -142,3 +142,20 @@ Seguir epecificaciones estandarizadas para escribir código ayuda a prevenir err
 * [The Single Biggest Mistake Programmers Make Every Day](https://medium.com/javascript-scene/the-single-biggest-mistake-programmers-make-every-day-62366b432308)
 * Video: [Herramientas del desarrollador moderno](http://www.andrezrv.com/2015/03/12/wordpress-meetup-buenos-aires-herramientas-del-desarrollador-moderno/)
 * Tutorial: [Try Git](https://try.github.io/levels/1/challenges/1)
+
+## Links útiles, clase 10
+
+* [PHPDoc](https://www.phpdoc.org/) - Para documentar tu script
+* [Comparación estricta](http://php.net/manual/en/language.operators.comparison.php) - Es mejor usar === que ==
+* [CodeSniffer](https://tommcfarlin.com/php-codesniffer/)
+* [Manejo de excepciones](http://php.net/manual/en/language.exceptions.php)
+* [Type hinting (desde 5.0 - mejoras en 7.0)](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
+* [Clases abstractas (desde 5.0)](http://php.net/manual/en/language.oop5.abstract.php)
+* [Interfaces (desde 5.0)](https://paulund.co.uk/using-interface-and-abstract-classes-in-php)
+* [Invocación (desde 5.3)](http://php.net/manual/en/language.oop5.magic.php#object.invoke)
+* [Namespaces (desde 5.3)](http://php.net/manual/en/language.namespaces.php)
+* [Array dereferencing (desde 5.4)](http://schlueters.de/blog/archives/138-Features-in-PHP-trunk-Aray-dereferencing.html)
+* [Sintaxis alternativa de arrays (desde 5.4)](http://www.debuggable.com/posts/better-array-syntax-for-php:484d6517-a700-4af3-a62f-64544834cda3)
+* [Traits (desde 5.4](http://php.net/manual/en/language.oop5.traits.php)
+* [Return type declaration (desde 7.0):](https://wiki.php.net/rfc/return_types)
+* PHP: [The Right Way](http://www.phptherightway.com/)
